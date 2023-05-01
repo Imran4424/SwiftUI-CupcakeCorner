@@ -11,12 +11,33 @@ struct AddressView: View {
     @ObservedObject var order: Order
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section {
+                TextField("Name", text: $order.name)
+                TextField("Street address", text: $order.streetAddress)
+                TextField("City", text: $order.city)
+                TextField("Zip", text: $order.zip)
+            }
+            
+            Section {
+                NavigationLink {
+                    CheckoutView(order: order)
+                } label: {
+                    Text("Checkout")
+                }
+            }
+        }
+        .navigationTitle("Delivery Details")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct AddressView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressView(order: Order())
+        // this navigation view is just for view purposes
+        // don't add this into second or more nth view without considering all cases
+        NavigationView {
+            AddressView(order: Order())
+        }
     }
 }
