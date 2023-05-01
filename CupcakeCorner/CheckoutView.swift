@@ -26,13 +26,44 @@ struct CheckoutView: View {
                     .font(.title)
                 
                 Button("Place Order") {
-                    
+                    // for async method call task is needed
+                    Task {
+                        await placeOrder()
+                    }
                 }
                 .padding()
             }
         }
         .navigationTitle("Check out")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+// MARK: - Methods
+extension CheckoutView {
+    func placeOrder() async {
+        guard let endcoded = try? JSONEncoder().encode(order) else {
+            print("Failed to encode order")
+            return
+        }
+        
+        // this is testing server url
+        // really nice sever to prototyping
+        guard let url = URL(string: "https://reqres.in/api/cupcakes") else {
+            print("invalid url")
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        
+        do {
+            let (data, _) = try await URLSession.shared.upload(for: request, from: endcoded)
+            // handle the result
+        } catch {
+            print("Checkout failed")
+        }
     }
 }
 
