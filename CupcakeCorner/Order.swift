@@ -65,6 +65,8 @@ class Order: ObservableObject, Codable {
         return cost
     }
     
+    init() { }
+    
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         
