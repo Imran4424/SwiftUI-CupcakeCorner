@@ -12,6 +12,8 @@
 		1D04E74729FF106000133914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D04E74629FF106000133914 /* Assets.xcassets */; };
 		1D04E74A29FF106000133914 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D04E74929FF106000133914 /* Preview Assets.xcassets */; };
 		1D04E75129FF8CC100133914 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04E75029FF8CC100133914 /* Order.swift */; };
+		1D04E75529FFB2ED00133914 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04E75429FFB2ED00133914 /* AddressView.swift */; };
+		1D04E75729FFB4FC00133914 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04E75629FFB4FC00133914 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		1D04E74629FF106000133914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D04E74929FF106000133914 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D04E75029FF8CC100133914 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		1D04E75429FFB2ED00133914 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		1D04E75629FFB4FC00133914 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			children = (
 				1D04E74229FF105F00133914 /* CupcakeCornerApp.swift */,
 				1D04E74429FF105F00133914 /* ContentView.swift */,
+				1D04E75629FFB4FC00133914 /* CheckoutView.swift */,
 				1D04E75029FF8CC100133914 /* Order.swift */,
+				1D04E75429FFB2ED00133914 /* AddressView.swift */,
 				1D04E74629FF106000133914 /* Assets.xcassets */,
 				1D04E74829FF106000133914 /* Preview Content */,
 			);
@@ -141,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D04E75129FF8CC100133914 /* Order.swift in Sources */,
+				1D04E75529FFB2ED00133914 /* AddressView.swift in Sources */,
+				1D04E75729FFB4FC00133914 /* CheckoutView.swift in Sources */,
 				1D04E74529FF105F00133914 /* ContentView.swift in Sources */,
 				1D04E74329FF105F00133914 /* CupcakeCornerApp.swift in Sources */,
 			);
